@@ -1,6 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { Table, Button, Select, DatePicker } from 'antd';
 import { Column } from '@ant-design/charts';
+import {
+  red,
+  volcano,
+  gold,
+  yellow,
+  lime,
+  green,
+  cyan,
+  blue,
+  geekblue,
+  purple,
+  magenta,
+  grey,
+} from '@ant-design/colors';
+
+console.log(blue); // ['#E6F4FF', '#BAE0FF', '#91CAFF', '#69B1FF', '#4096FF', '#1677FF', '#0958D9', '#003EB3', '#002C8C', '#001D66']
+console.log(blue.primary); // '#1677FF'
 const { RangePicker } = DatePicker;
 
 function App() {
@@ -37,6 +54,7 @@ function App() {
 
   const modelOptions = Array.from(new Set(data.map(item => item.model)));
   const typeOptions = Array.from(new Set(data.map(item => item.data_type)));
+  console.log('所有 data_type:', data.map(item => item.data_type));
 
   const columns = [
     { title: 'Model', dataIndex: 'model', key: 'model', sorter: (a, b) => a.model.localeCompare(b.model), align: 'center', width: 120 },
@@ -48,6 +66,8 @@ function App() {
     (filterModel ? row.model === filterModel : true) &&
     (filterType ? row.data_type === filterType : true)
   );
+
+  console.log('filteredData:', filteredData);
 
   return (
     <div style={{ padding: 24 }}>
@@ -98,7 +118,16 @@ function App() {
         data={filteredData}
         xField="period"
         yField="total_tokens"
-        seriesField="model"
+        seriesField="data_type"
+        colorField="data_type"
+        
+        color={data_type => {
+          console.log('color参数 data_type:', data_type);
+          if (data_type === 'input') return yellow.primary;
+          if (data_type === 'output') return green.primary;
+          if (data_type === 'system') return red.primary;
+          return '#888';
+        }}
         isGroup={true}
         label={{ position: 'top' }}
         xAxis={{
