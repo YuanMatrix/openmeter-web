@@ -1,15 +1,1 @@
-version: '3.8'
-services:
-  frontend:
-    build: .
-    image: openmeter-frontend:latest
-    container_name: openmeter-frontend
-    restart: always
-    ports:
-      - "127.0.0.1:3000:3000"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000"]
-      interval: 5s
-      timeout: 3s
-      retries: 10
-  
+ 

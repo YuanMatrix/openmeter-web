@@ -8,7 +8,8 @@ const PORT = 3001; // 前端可以用 3000，后端用 3001
 app.use(cors());
 
 app.get('/api/query-tokens', async (req, res) => {
-  const clickhouseUrl = 'http://localhost:8123';
+  
+  const clickhouseUrl = 'http://quickstart-clickhouse-1:8123';
   const { windowSize = 'Day', start, end } = req.query;
 
   let startDate = start ? `${start} 00:00:00` : '';
