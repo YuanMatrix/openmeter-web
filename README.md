@@ -3,10 +3,7 @@
 This is a lightweight frontend visualization tool for monitoring token usage sent to [OpenMeter](https://github.com/openmeterio/openmeter).  
 It supports token tracking across text, images, and audio models.
 
-openmeter 启动的话用```bash https://github.com/openmeterio/openmeter 可参考官网
-git clone git@github.com:openmeterio/openmeter.git
-cd openmeter/quickstart
-docker compose up -d
+
 
 ##  Features
 
@@ -28,6 +25,11 @@ docker compose up -d
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/openmeter-GUI.git
+
   docker compose up -d --build
+
+2.openmeter 启动的话用 https://github.com/openmeterio/openmeter 可参考官网
+git clone git@github.com:openmeterio/openmeter.git
+cd openmeter/quickstart
+docker compose up -d
 
