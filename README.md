@@ -26,8 +26,7 @@ It supports token tracking across text, images, and audio models.
 ### 1. Clone this repository
 
 ```bash
-git clone https://github.com/your-username/openmeter-web.git
-cd openmeter-web
+docker compose up -d --build
 
 2.openmeter 启动的话用 https://github.com/openmeterio/openmeter 可参考官网
 git clone git@github.com:openmeterio/openmeter.git
