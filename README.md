@@ -1,7 +1,12 @@
-# OpenMeter Web Interface
+# OpenMeter Web Interface GUI 
 
 This is a lightweight frontend visualization tool for monitoring token usage sent to [OpenMeter](https://github.com/openmeterio/openmeter).  
 It supports token tracking across text, images, and audio models.
+
+#openmeter 启动的话用clone到本地 
+git clone git@github.com:openmeterio/openmeter.git
+cd openmeter/quickstart
+docker compose up -d
 
 ##  Features
 
