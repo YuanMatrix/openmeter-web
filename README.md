@@ -19,13 +19,10 @@ It supports token tracking across text, images, and audio models.
 
 
 
-## Getting Started 云端启动
+## Getting Started docker启动
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/openmeter-GUI.git
-   cd openmeter-GUI
-   node server.js
-   cd openmeter-frontend
-   pnpm start
+  docker compose up -d --build
 
